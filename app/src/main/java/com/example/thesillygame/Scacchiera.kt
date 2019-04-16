@@ -3,6 +3,9 @@ package com.example.thesillygame
 import android.graphics.Color
 import com.example.thesillygame.ValueChanged.nmosse
 
+var colore1 = Color.RED
+var colore2 = Color.BLUE
+
 object Scacchiera {
     var scacchieraList = mutableListOf<Casella>()
 
@@ -16,9 +19,9 @@ object Scacchiera {
             for (q in 1..ndivisioni) {
                 var colore = 0
                 if ((0..1).random() == 0)
-                    colore = Color.RED
+                    colore = colore1
                 else
-                    colore = Color.BLUE
+                    colore = colore2
                 scacchieraList.add(Casella(k,q,colore,0,0,0,0))
             }
         }
