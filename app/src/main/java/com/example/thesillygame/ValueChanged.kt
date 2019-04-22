@@ -27,4 +27,18 @@ object ValueChanged {
             it()
         }
     }
+
+    var colore1: Int by Delegates.observable(0) { property, oldValue, newValue ->
+        // do your stuff here
+        refreshListListeners.forEach {
+            it()
+        }
+    }
+
+    var colore2: Int by Delegates.observable(0) { property, oldValue, newValue ->
+        // do your stuff here
+        refreshListListeners.forEach {
+            it()
+        }
+    }
 }

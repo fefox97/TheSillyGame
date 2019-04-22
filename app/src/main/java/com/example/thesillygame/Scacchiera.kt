@@ -1,15 +1,18 @@
 package com.example.thesillygame
 
 import android.graphics.Color
+import com.example.thesillygame.ValueChanged.colore1
+import com.example.thesillygame.ValueChanged.colore2
 import com.example.thesillygame.ValueChanged.nmosse
 
-var colore1 = Color.RED
-var colore2 = Color.BLUE
+
 
 object Scacchiera {
     var scacchieraList = mutableListOf<Casella>()
 
     init {
+        colore1 = Color.RED
+        colore2 = Color.BLUE
         inizializza()
     }
 

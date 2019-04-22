@@ -2,6 +2,9 @@ package com.example.thesillygame
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import com.example.thesillygame.Scacchiera.inizializza
+import com.example.thesillygame.ValueChanged.colore1
+import com.example.thesillygame.ValueChanged.colore2
 import com.flask.colorpicker.ColorPickerView
 import com.flask.colorpicker.builder.ColorPickerDialogBuilder
 import kotlinx.android.synthetic.main.activity_settings.*
@@ -11,7 +14,12 @@ class SettingsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
-        color1.setOnClickListener{
+
+        // Fa parte del listener su mosse
+        ValueChanged.refreshListListeners.add(::refreshColore1)
+        ValueChanged.refreshListListeners.add (::refreshColore2)
+
+        color1_btn.setOnClickListener{
             ColorPickerDialogBuilder
                 .with(this)
                 .setTitle("Choose color")
@@ -23,9 +31,10 @@ class SettingsActivity : AppCompatActivity() {
                 .setNegativeButton("cancel") { dialog, which -> }
                 .build()
                 .show()
-            Scacchiera.inizializza()
+            //Scacchiera.inizializza()
+            //color1_btn.setBackgroundColor(colore1)
         }
-        color2.setOnClickListener {
+        color2_btn.setOnClickListener {
             ColorPickerDialogBuilder
                 .with(this)
                 .setTitle("Choose color")
@@ -37,8 +46,18 @@ class SettingsActivity : AppCompatActivity() {
                 .setNegativeButton("cancel") { dialog, which -> }
                 .build()
                 .show()
-            Scacchiera.inizializza()
+            //Scacchiera.inizializza()
+            //color2_btn.setBackgroundColor(colore2)
         }
+    }
+
+    // Fa parte del listener su mosse
+    fun refreshColore1(){
+        color1_btn.setBackgroundColor(colore1)
+    }
+
+    fun refreshColore2(){
+        color2_btn.setBackgroundColor(colore2)
     }
 }
 

@@ -10,6 +10,8 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
 import com.example.thesillygame.Scacchiera.scacchieraList
+import com.example.thesillygame.ValueChanged.colore1
+import com.example.thesillygame.ValueChanged.colore2
 import com.example.thesillygame.ValueChanged.nmosse
 import com.example.thesillygame.ValueChanged.nvittorie
 
