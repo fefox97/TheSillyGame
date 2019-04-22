@@ -2,7 +2,6 @@ package com.example.thesillygame
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import com.example.thesillygame.Scacchiera.inizializza
 import com.example.thesillygame.ValueChanged.colore1
 import com.example.thesillygame.ValueChanged.colore2
 import com.flask.colorpicker.ColorPickerView
@@ -31,8 +30,6 @@ class SettingsActivity : AppCompatActivity() {
                 .setNegativeButton("cancel") { dialog, which -> }
                 .build()
                 .show()
-            //Scacchiera.inizializza()
-            //color1_btn.setBackgroundColor(colore1)
         }
         color2_btn.setOnClickListener {
             ColorPickerDialogBuilder
@@ -46,12 +43,11 @@ class SettingsActivity : AppCompatActivity() {
                 .setNegativeButton("cancel") { dialog, which -> }
                 .build()
                 .show()
-            //Scacchiera.inizializza()
-            //color2_btn.setBackgroundColor(colore2)
         }
     }
 
     // Fa parte del listener su mosse
+    //TODO: aggiungere refresh automatico della scacchiera al cambio colore
     fun refreshColore1(){
         color1_btn.setBackgroundColor(colore1)
     }

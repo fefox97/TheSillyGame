@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView2"
             android:textColor="@android:color/background_light" android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="46dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="46dp"
-            android:layout_marginTop="97dp" app:layout_constraintTop_toBottomOf="@+id/color2_btn"/>
+            android:layout_marginTop="97dp" app:layout_constraintTop_toBottomOf="@+id/color2_btn"
+            android:textSize="24sp" android:textAlignment="center" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 </android.support.constraint.ConstraintLayout>
